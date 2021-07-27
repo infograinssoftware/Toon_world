@@ -19,8 +19,8 @@ contract Token is Context, IERC20, Ownable {
     mapping(address => bool) private _isExcluded;
     address[] private _excluded;
 
-    string private constant _NAME = 'Sleepy Sloth';
-    string private constant _SYMBOL = 'SLEEPY';
+    string private constant _NAME = 'Toon World';
+    string private constant _SYMBOL = '$Toon';
     uint8 private constant _DECIMALS = 8;
 
     uint256 private constant _MAX = ~uint256(0);
