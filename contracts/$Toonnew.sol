@@ -1,4 +1,3 @@
-https://testnet.bscscan.com/address/0x5fe6b9fe22f12f08a7ff70d2f7f3052d84949247
 
 pragma solidity ^0.8.0;
 
@@ -21,7 +20,7 @@ contract Token is Context, IERC20, Ownable {
 
     string private constant _NAME = 'Toon World';
     string private constant _SYMBOL = '$Toon';
-    uint8 private constant _DECIMALS = 8;
+    uint8 private constant _DECIMALS = 16;
 
     uint256 private constant _MAX = ~uint256(0);
     uint256 private constant _DECIMALFACTOR = 10**uint256(_DECIMALS);
@@ -190,7 +189,7 @@ contract Token is Context, IERC20, Ownable {
 
     function excludeAccount(address account) external onlyOwner() {
         require(
-            account != 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D,
+            account != 0xeb17Dd35e47B1a41ba4D86B3506ec1f9b680b56a,
             'We can not exclude Uniswap router.'
         );
         require(!_isExcluded[account], 'Account is already excluded');
